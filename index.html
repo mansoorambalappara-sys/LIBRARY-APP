@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="ml"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>പുസ്തക ചങ്ങാതി – ജി.എൽ.പി.എസ് മുണ്ടേക്കരാട് ലൈബ്രറി</title>
+<link href="https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#e6ecf4;--ink:#0f2038;--mut:#55657d;--card:#fff;--line:#cdd7e5;--acc:#d9a441;--ok:#1b7f79;--bad:#c8433f;--in:#f3f6fa;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1230;--ink:#eef1ff;--mut:#9aa3d6;--card:#1a1f4d;--line:#2d3470;--in:#12163b;--ok:#3fd6c1;--bad:#ff7a7f}}
+:root[data-theme="dark"]{--bg:#0e1230;--ink:#eef1ff;--mut:#9aa3d6;--card:#1a1f4d;--line:#2d3470;--in:#12163b;--ok:#3fd6c1;--bad:#ff7a7f}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Anek Malayalam',sans-serif;line-height:1.6}
+.wrap{max-width:900px;margin:0 auto;padding:12px 14px 40px}
+.hero{display:flex;align-items:center;gap:8px;justify-content:space-between;padding:16px 20px;color:#fff;border-radius:22px;background:radial-gradient(circle at 85% 40%,#27619c,transparent 55%),linear-gradient(135deg,#0c2342,#143a66);box-shadow:0 2px 0 #3b6ea8 inset,0 8px 0 #091a31,0 22px 34px rgba(9,26,49,.35);margin-bottom:14px}
+.hero h1{margin:0;font-weight:800;line-height:1.25;font-size:clamp(32px,8.5vw,54px);color:#ffd36b;transform-origin:left center;animation:sway3 6s ease-in-out infinite;text-shadow:0 1px 0 #e0a93a,0 2px 0 #c98f22,0 3px 0 #b3791a,0 4px 0 #9d6613,0 5px 0 #87550f,0 6px 0 #6f450c,0 14px 16px rgba(0,0,0,.4)}@keyframes sway3{0%,100%{transform:perspective(700px) rotateY(-9deg)}50%{transform:perspective(700px) rotateY(7deg)}}.hero .sub{font-size:clamp(16px,4vw,22px);font-weight:700;color:#fff;margin-top:2px}
+.hero p{margin:4px 0 0;color:#c4d5ec;font-size:14px;font-weight:500}
+.scene{perspective:700px;width:190px;height:150px;flex:none;transform:rotateX(-14deg) scale(1.1);position:relative}.scene::after{content:'';position:absolute;left:25px;right:25px;bottom:-14px;height:26px;border-radius:50%;background:radial-gradient(rgba(0,0,0,.45),transparent 70%);transform:rotateX(90deg) translateZ(-30px)}
+.ring{position:relative;width:100%;height:100%;transform-style:preserve-3d;animation:spin 16s linear infinite}
+.bk{position:absolute;left:60px;top:25px;width:66px;height:92px;transform-style:preserve-3d;transform:rotateY(var(--a)) translateZ(62px)}
+.bk i{position:absolute;display:block;background:var(--c);border:1px solid rgba(0,0,0,.18)}
+.bk .f{inset:0;transform:translateZ(13px);display:grid;place-items:center;font-size:26px;color:#fff;font-style:normal;box-shadow:inset 6px 0 0 rgba(0,0,0,.18)}
+.bk .b{inset:0;transform:rotateY(180deg) translateZ(13px)}
+.bk .r{width:26px;height:92px;left:20px;background:#fff8e6;transform:rotateY(90deg) translateZ(33px)}
+.bk .l{width:26px;height:92px;left:20px;transform:rotateY(-90deg) translateZ(33px)}
+.bk .t{width:66px;height:26px;top:33px;background:#fff8e6;transform:rotateX(90deg) translateZ(46px)}
+.bk .u{width:66px;height:26px;top:33px;background:#fff8e6;transform:rotateX(-90deg) translateZ(46px)}
+@keyframes spin{to{transform:rotateY(360deg)}}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:10px 0;perspective:800px}
+.st{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:10px 12px;transition:transform .15s;transform-style:preserve-3d;box-shadow:0 1px 0 #fff inset,0 5px 0 var(--line),0 14px 22px rgba(15,32,56,.15)}
+.st b{display:block;font-size:28px;line-height:1.1}.st span{font-size:12px;color:var(--mut)}
+.tabs{display:flex;gap:6px;overflow-x:auto;padding:4px 0 10px;position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);z-index:5}
+.tab{flex:none;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:12px;padding:8px 14px;font:inherit;font-weight:600;cursor:pointer;box-shadow:0 4px 0 var(--line);transition:transform .1s,box-shadow .1s}
+.tab.on{background:var(--acc);color:#14183a;border-color:var(--acc);box-shadow:0 4px 0 #8a6414}
+.tab:active{transform:translateY(3px);box-shadow:0 1px 0 var(--line)}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 1px 0 #fff inset,0 6px 0 var(--line),0 20px 32px rgba(15,32,56,.16);transform-origin:top;animation:flip .5s ease}@keyframes flip{from{transform:perspective(900px) rotateX(-16deg) translateY(12px);opacity:0}}
+.panel h2{margin:0 0 6px;font-size:20px}
+label{display:block;font-size:13px;color:var(--mut);margin:12px 0 4px;font-weight:600}
+input,textarea,select{width:100%;font:inherit;color:var(--ink);background:var(--in);border:1.5px solid var(--line);border-radius:12px;padding:10px 12px}
+input:focus,textarea:focus,button:focus-visible{outline:3px solid var(--acc);outline-offset:1px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.chips{display:flex;gap:8px}
+.chip{width:52px;height:52px;border-radius:14px;border:2px solid var(--c);background:transparent;color:var(--ink);font:inherit;font-size:20px;font-weight:800;cursor:pointer}
+.chip.on{background:var(--c);color:#fff;transform:translateY(-3px) rotateX(12deg);box-shadow:0 8px 0 rgba(0,0,0,.2)}
+.go{margin-top:16px;width:100%;padding:13px;border:0;border-radius:14px;background:var(--ok);color:#fff;font:inherit;font-size:17px;font-weight:800;cursor:pointer;box-shadow:0 5px 0 rgba(0,0,0,.25)}
+.go:active{transform:translateY(4px);box-shadow:0 1px 0 rgba(0,0,0,.25)}
+.go.alt{background:var(--acc);color:#14183a}
+.item{display:flex;gap:10px;align-items:center;justify-content:space-between;border:1px solid var(--line);background:var(--in);border-radius:14px;padding:10px 12px;margin-top:8px;animation:pop .25s ease}
+@keyframes pop{from{transform:rotateX(-40deg) scale(.96);opacity:0}}
+.item h4{margin:0;font-size:16px}.item small{color:var(--mut);display:block}
+.badge{display:inline-block;font-size:12px;font-weight:700;border-radius:999px;padding:1px 9px;background:var(--ok);color:#fff}
+.badge.late{background:var(--bad)}.badge.out{background:var(--acc);color:#14183a}.badge.gr{background:var(--mut)}
+.btn{border:0;border-radius:10px;padding:8px 12px;background:var(--ok);color:#fff;font:inherit;font-weight:700;cursor:pointer;flex:none}
+.btn.x{background:transparent;color:var(--bad);border:1px solid var(--bad)}
+.fl{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 0}
+.empty{text-align:center;color:var(--mut);padding:24px 8px}.empty .kid{display:block;margin:0 auto 6px}
+.strip{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:6px 18px;margin-bottom:12px;box-shadow:0 5px 0 var(--line),0 14px 22px rgba(15,32,56,.12)}.strip b{font-size:20px;display:block}.strip span{color:var(--mut);font-size:14px}
+.kid{width:150px;height:auto;flex:none}
+.strip{display:block;padding:0;overflow:hidden;position:relative;border-radius:20px}.strip .garden{display:block;width:100%;height:auto}.cap{position:absolute;left:14px;top:10px;background:rgba(255,255,255,.88);color:#0f2038;padding:3px 14px;border-radius:12px;font-weight:700;box-shadow:0 3px 0 rgba(0,0,0,.15)}
+.sway{animation:sw2 3.6s ease-in-out infinite}@keyframes sw2{50%{transform:rotate(2.5deg)}}.cl{animation:cld 30s ease-in-out infinite alternate}@keyframes cld{to{transform:translateX(150px)}}.spin{transform-origin:716px 46px;animation:sp 24s linear infinite}@keyframes sp{to{transform:rotate(360deg)}}.fly{animation:fly 18s linear infinite}@keyframes fly{from{transform:translateX(-80px)}to{transform:translateX(900px)}}.flap{animation:flap .45s ease-in-out infinite alternate}@keyframes flap{to{transform:rotate(-30deg)}}
+.lg3d{margin:0;font-size:clamp(30px,9vw,44px);color:#e8a33d;text-shadow:0 1px 0 #cf8a26,0 2px 0 #b9761d,0 3px 0 #a36316,0 4px 0 #8d5110,0 5px 0 #77420c,0 10px 12px rgba(15,32,56,.35)}
+.login{position:fixed;inset:0;z-index:30;display:grid;place-items:center;padding:16px;background:radial-gradient(circle at 70% 20%,#27619c,transparent 55%),#0c2342;overflow:auto}.login[hidden]{display:none}.login .panel{width:min(420px,100%);text-align:center}.login .chips{justify-content:center}.who{display:flex;align-items:center;gap:10px;justify-content:flex-end;margin:0 0 8px;font-weight:600}.who .btn{padding:6px 12px}
+.cloud{position:fixed;left:10px;bottom:calc(8px + env(safe-area-inset-bottom,0px));font-size:12px;background:var(--card);border:1px solid var(--line);color:var(--mut);padding:2px 10px;border-radius:999px;z-index:6}.strip .kid{width:130px}.bob{animation:bob 3s ease-in-out infinite}@keyframes bob{50%{transform:translateY(-4px)}}
+.eye{transform-box:fill-box;transform-origin:center;animation:blink 4s infinite}@keyframes blink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.1)}}
+.pg{transform-origin:100px 124px;animation:pf 3.2s ease-in-out infinite}@keyframes pf{0%{transform:scaleX(1);opacity:1}45%{transform:scaleX(-1);opacity:1}55%{transform:scaleX(-1);opacity:0}100%{transform:scaleX(1);opacity:0}}
+.up{animation:up 4s ease-in infinite}@keyframes up{0%{transform:translateY(10px);opacity:0}30%{opacity:1}100%{transform:translateY(-16px);opacity:0}}
+@media (max-width:560px){.strip .kid:last-child{display:none}}
+#toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translate(-50%,120px);background:var(--ink);color:var(--bg);padding:11px 18px;border-radius:14px;font-weight:700;transition:transform .3s;z-index:20;max-width:90%}
+#toast.show{transform:translate(-50%,0)}#toast.err{background:var(--bad);color:#fff}
+@media (max-width:560px){.scene{width:130px;height:120px;transform:scale(.72) rotateX(-12deg)}.row{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style></head><body>
+<div class="wrap">
+<div class="who" id="who"></div>
+<div class="hero"><div><h1>പുസ്തക ചങ്ങാതി</h1><div class="sub">സ്കൂൾ ലൈബ്രറി</div><p style="font-size:16px;font-weight:600">ജി.എൽ.പി സ്കൂൾ മുണ്ടേക്കരാട്</p></div><div hidden><h1>ജി.എൽ.പി.എസ് മുണ്ടേക്കരാട്<br>സ്കൂൾ ലൈബ്രറി</h1><p>ഒന്നു മുതൽ നാലു വരെ ക്ലാസുകൾ</p></div>
+<div class="scene"><div class="ring" id="ring"></div></div></div>
+<div class="strip" id="strip"></div>
+<div class="stats">
+<div class="st tilt"><b id="s1">0</b><span>കുട്ടികളുടെ കൈയിലുള്ള പുസ്തകം</span></div>
+<div class="st tilt"><b id="s2" style="color:var(--bad)">0</b><span>തിരിച്ചു നൽകാൻ വൈകിയവ</span></div>
+<div class="st tilt"><b id="s3">0</b><span>ആകെ പുസ്തകങ്ങൾ</span></div></div>
+<div class="tabs" id="tabs"></div>
+<div id="app"></div>
+</div><div class="login" id="login" hidden></div><div id="cloud" class="cloud"></div><div id="toast"></div>
+<script>
+const KEY='glps21853-library-v1',CC={1:'#d9822b',2:'#1b9aa6',3:'#4a6fd1',4:'#c9486b'};
+const RAW=`1|2175|HISHAM P P
+1|2179|RABEEUL RASHAAD K
+1|2178|FIDHA FATHIMA C
+1|2176|MARJAANAH K
+1|2171|AL AMEEN P S
+1|2173|FATHIMATH C M
+1|2169|AYISHA RIYA C
+1|2168|FATHIMA RAZANA
+1|2172|FAIHA FATHIMA
+1|2170|FATHIMA ISHA V
+1|2177|FATHIMA NASHWA V
+1|2180|AYISHA MEHRIN C
+1|2174|MUHAMMED RISWAN .P
+1|2181|MUHAMMED RAZAN A R
+1|2167|HIBA FATHIMA
+2|2165|FATHIMA RAZANA P
+2|2162|ALAYNA FATHIMA P J
+2|2157|MUHAMMED RISWAN P
+2|2156|MUHAMMED ASLAM K
+2|2158|NISHAN V
+2|2153|FATHIMA MUFEEDA
+2|2164|AYISHA HANA C M
+2|2152|MUHAMMED TAMIM C
+2|2161|FATHIMA MEHRIN K
+2|2151|NISHBA FATHIMA C
+2|2155|AIRA FATHIMA K
+2|2154|MUHAMMED AFNAS K
+2|2163|MUHAMMED SHAHABAS KP
+2|2159|ARYANANDA B
+2|2160|DHRUVA DK
+3|2134|MIFTHAH K C
+3|2145|MUHAMMED AMJAD P P
+3|2141|SHIHA FATHIMA C T
+3|2148|MUHAMMED RAZAN P P
+3|2140|FATHIMA HAYA P P
+3|2136|MUHAMMED MINHAJ N F
+3|2137|MUHAMMED MINHAJ P
+3|2135|MINHA FATHIMA P
+3|2139|FATHIMA RIFA N
+3|2144|RABEEH C
+3|2146|ALEENA A P
+3|2138|MUHAMMED HISHAM C
+3|2143|MUHAMMED MUSTHAFA
+3|2149|FATHIMA HAFILA V
+3|2133|MUHAMMED SHAMMAS M C
+3|2142|ANSAF M K
+4|2129|MUHAMMED SHARIF M C
+4|2130|AHMMED NAJIL V
+4|2119|MUHAMMED RAIHAN N
+4|2128|MINYA FATHIMA C K
+4|2124|NIYA FATHIMA K P
+4|2121|AJWA FATHIMA C
+4|2122|FAHMA FATHIMA C
+4|2118|SHAHMA P K
+4|2117|FATHIMA MEHRIN C
+4|2116|FATHIMA SWAFA
+4|2115|FATHIMA VAFA
+4|2127|MUHAMMED RIZAN C
+4|2123|ABDULLA MINHAJ C T
+4|2114|SILVA FATHIMA C
+4|2125|HISANA FATHIMA C K
+4|2126|JADUL HAQUE K
+4|2120|MUHAMMED RAZAN P
+4|2113|MUHAMMED HASHIM V`;
+let S,tab='issue',ic=1,sc=1,rf='all';
+const $=s=>document.querySelector(s),uid=()=>Math.random().toString(36).slice(2,9);
+const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const iso=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+const today=()=>iso(new Date()),plus=(s,n)=>{const d=new Date(s+'T00:00:00');d.setDate(d.getDate()+n);return iso(d)};
+const fmt=s=>s?s.split('-').reverse().join('/'):'';
+function load(){try{S=JSON.parse(localStorage.getItem(KEY))}catch(e){}
+ if(!S||!S.students){S={students:[],books:[],loans:[]};RAW.split('\n').forEach(l=>{const[c,a,n]=l.split('|');S.students.push({id:'s'+a,cls:+c,adm:a,name:n})});save()}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}sync()}
+let tt;function toast(m,e){const t=$('#toast');t.textContent=m;t.className='show'+(e?' err':'');clearTimeout(tt);tt=setTimeout(()=>t.className='',2600)}
+const late=l=>!l.ret&&l.due<today();
+function stats(){const m=S.loans.filter(mine);$('#s1').textContent=m.filter(l=>!l.ret).length;$('#s2').textContent=m.filter(late).length;$('#s3').textContent=S.books.length}
+const TABS=[['issue','പുസ്തകം നൽകുക'],['ret','തിരിച്ചെടുക്കുക'],['stu','കുട്ടികൾ'],['bk','പുസ്തകങ്ങൾ'],['rec','രേഖകൾ']];
+function tabs(){$('#tabs').innerHTML=(isA?TABS.concat([['adm','എല്ലാ ക്ലാസുകളും']]):TABS).map(t=>`<button class="tab ${t[0]==tab?'on':''}" onclick="tab='${t[0]}';R()">${t[1]}</button>`).join('')}
+const chips=(v,fn)=>`<div class="chips">${[1,2,3,4].filter(c=>!me||c==me).map(c=>`<button class="chip ${c==v?'on':''}" style="--c:${CC[c]}" onclick="${fn}(${c})">${c}</button>`).join('')}</div>`;
+const V={
+issue(){const t=today();return`<div class="panel"><h2>പുസ്തകം നൽകുക</h2><label>ക്ലാസ്</label>${chips(ic,'setIc')}
+<label>കുട്ടിയുടെ പേര്</label><input id="is" list="dls" autocomplete="off" placeholder="പേര് എഴുതി തിരഞ്ഞെടുക്കുക"><datalist id="dls">${S.students.filter(s=>s.cls==ic).map(s=>`<option value="${esc(s.name)}">`).join('')}</datalist>
+<label>പുസ്തകത്തിന്റെ പേര്</label><input id="ib" list="dlb" autocomplete="off" placeholder="പുസ്തകം തിരഞ്ഞെടുക്കുക / പുതിയത് എഴുതുക"><datalist id="dlb">${S.books.map(b=>`<option value="${esc(b.title)}">`).join('')}</datalist>
+<div class="row"><div><label>എടുത്ത തീയതി</label><input type="date" id="d1" value="${t}" onchange="$('#d2').value=plus(this.value,14)"></div><div><label>തിരിച്ചേൽപ്പിക്കേണ്ട തീയതി</label><input type="date" id="d2" value="${plus(t,14)}"></div></div>
+<button class="go" onclick="issue()">സേവ് ചെയ്യുക</button></div>`},
+ret(){return`<div class="panel"><h2>തിരിച്ചെടുക്കുക</h2><label>പുസ്തകത്തിന്റെയോ കുട്ടിയുടെയോ പേര് തിരയുക</label><input id="rq" oninput="rl()" placeholder="തിരയുക"><div id="rlist"></div></div>`},
+stu(){return`<div class="panel"><h2>കുട്ടികൾ</h2>${chips(sc,'setSc')}<label>തിരയുക</label><input id="sq" oninput="sl()" placeholder="പേര്">
+<div id="slist"></div>
+<label>പുതിയ കുട്ടിയെ ചേർക്കുക (ഓരോ വരിയിലും ഒരു പേര്)</label><textarea id="sn" rows="3" placeholder="ഒന്നോ അതിലധികമോ പേരുകൾ"></textarea><button class="go alt" onclick="addStu()">ക്ലാസ് ${sc}-ൽ ചേർക്കുക</button></div>`},
+bk(){return`<div class="panel"><h2>പുസ്തകങ്ങൾ</h2><label>പുസ്തകങ്ങൾ ചേർക്കുക (ഓരോ വരിയിലും ഒന്ന്)</label><textarea id="bn" rows="4" placeholder="പുസ്തകത്തിന്റെ പേരുകൾ"></textarea><button class="go alt" onclick="addBk()">പുസ്തകങ്ങൾ സേവ് ചെയ്യുക</button>
+<label>തിരയുക</label><input id="bq" oninput="bl()" placeholder="പുസ്തകത്തിന്റെ പേര്"><div id="blist"></div></div>`},
+rec(){return`<div class="panel"><h2>രേഖകൾ</h2><div class="fl">${[['all','എല്ലാം'],['out','കൈയിലുള്ളവ'],['late','വൈകിയവ'],['back','തിരിച്ചേൽപ്പിച്ചവ']].map(f=>`<button class="tab ${rf==f[0]?'on':''}" onclick="rf='${f[0]}';R()">${f[1]}</button>`).join('')}</div>
+<label>തിരയുക</label><input id="cq" oninput="cl()" placeholder="കുട്ടി / പുസ്തകം"><div id="clist"></div>
+<label>ബാക്കപ്പ് (ഡാറ്റ സൂക്ഷിക്കാൻ ഇത് പകർത്തി വെക്കുക)</label><textarea id="bu" rows="3"></textarea>
+<div class="row"><button class="go alt" onclick="bu.value=JSON.stringify(S);bu.select()">ബാക്കപ്പ് എടുക്കുക</button><button class="go" onclick="restore()">തിരിച്ചു ചേർക്കുക</button></div></div>`}};
+function R(){tabs();$('#app').innerHTML=V[tab]();stats();({ret:rl,stu:sl,bk:bl,rec:cl})[tab]?.()}
+function setIc(c){ic=c;R()}function setSc(c){sc=c;R()}
+function issue(){const sn=$('#is').value.trim(),bt=$('#ib').value.trim(),d1=$('#d1').value,d2=$('#d2').value;
+ const st=S.students.find(s=>s.cls==ic&&s.name.toLowerCase()==sn.toLowerCase());
+ if(!st)return toast('ഈ ക്ലാസിൽ ആ പേരില്ല. പട്ടികയിൽ നിന്ന് തിരഞ്ഞെടുക്കുക','e');
+ if(!bt)return toast('പുസ്തകത്തിന്റെ പേര് നൽകുക','e');
+ if(!d1||!d2)return toast('തീയതികൾ നൽകുക','e');
+ let b=S.books.find(x=>x.title.toLowerCase()==bt.toLowerCase());
+ if(b&&S.loans.some(l=>l.bid==b.id&&!l.ret)&&!confirm('ഈ പുസ്തകം ഇപ്പോൾ മറ്റൊരാളുടെ കൈയിലാണ്. എന്നിട്ടും നൽകണോ?'))return;
+ if(!b){b={id:uid(),title:bt};S.books.push(b)}
+ S.loans.push({id:uid(),sid:st.id,sname:st.name,cls:st.cls,bid:b.id,btitle:b.title,issued:d1,due:d2,ret:null});
+ save();toast('സേവ് ചെയ്തു: '+b.title);R()}
+const loanCard=(l,btn)=>`<div class="item"><div><h4>${esc(l.btitle)}</h4><small>${esc(l.sname)} · ക്ലാസ് ${l.cls}</small><small>എടുത്തത്: ${fmt(l.issued)} · തിരിച്ചു നൽകേണ്ടത്: ${fmt(l.due)}${l.ret?' · തിരിച്ചു നൽകിയത്: '+fmt(l.ret):''}</small>
+${l.ret?'<span class="badge">തിരിച്ചേൽപ്പിച്ചു</span>':late(l)?'<span class="badge late">വൈകി</span>':'<span class="badge out">കൈയിലുണ്ട്</span>'}</div>${btn?`<button class="btn" onclick="giveBack('${l.id}')">തിരിച്ചെടുത്തു</button>`:''}</div>`;
+const match=(l,q)=>(l.btitle+' '+l.sname).toLowerCase().includes(q.toLowerCase());
+function rl(){const q=$('#rq').value,a=S.loans.filter(l=>mine(l)&&!l.ret&&match(l,q));$('#rlist').innerHTML=a.length?a.map(l=>loanCard(l,1)).join(''):'<div class="empty">'+KID('#d9822b','#2b2118')+'കൈയിലുള്ള പുസ്തകങ്ങളൊന്നുമില്ല</div>'}
+function giveBack(id){const l=S.loans.find(x=>x.id==id);l.ret=today();save();toast('തിരിച്ചെടുത്തു: '+l.btitle);stats();rl()}
+function cl(){const q=$('#cq').value;let a=S.loans.filter(l=>mine(l)&&match(l,q)&&(rf=='all'||(rf=='out'&&!l.ret)||(rf=='late'&&late(l))||(rf=='back'&&l.ret)));
+ a=a.slice().reverse();$('#clist').innerHTML=a.length?a.map(l=>loanCard(l,0)).join(''):'<div class="empty">രേഖകളൊന്നുമില്ല</div>'}
+function sl(){const q=$('#sq').value.toLowerCase(),a=S.students.filter(s=>s.cls==sc&&s.name.toLowerCase().includes(q));
+ $('#slist').innerHTML=`<small style="color:var(--mut)">ആകെ ${S.students.filter(s=>s.cls==sc).length} കുട്ടികൾ</small>`+a.map(s=>{const n=S.loans.filter(l=>l.sid==s.id&&!l.ret).length;return`<div class="item"><div><h4>${esc(s.name)}</h4><small>അഡ്മിഷൻ നമ്പർ ${esc(s.adm||'-')}</small></div><div>${n?`<span class="badge out">${n} പുസ്തകം</span> `:''}<button class="btn x" onclick="delStu('${s.id}')">നീക്കുക</button></div></div>`}).join('')}
+function addStu(){const L=$('#sn').value.split('\n').map(x=>x.trim()).filter(Boolean);let n=0;
+ L.forEach(x=>{if(!S.students.some(s=>s.cls==sc&&s.name.toLowerCase()==x.toLowerCase())){S.students.push({id:uid(),cls:sc,adm:'',name:x});n++}});
+ save();toast(n+' പേർ സേവ് ചെയ്തു');R()}
+function delStu(id){if(!confirm('ഈ കുട്ടിയെ പട്ടികയിൽ നിന്ന് നീക്കണോ?'))return;S.students=S.students.filter(s=>s.id!=id);save();sl()}
+function bl(){const q=$('#bq').value.toLowerCase(),a=S.books.filter(b=>b.title.toLowerCase().includes(q));
+ $('#blist').innerHTML=a.length?a.map(b=>{const o=S.loans.some(l=>l.bid==b.id&&!l.ret);return`<div class="item"><div><h4>${esc(b.title)}</h4><span class="badge ${o?'out':''}">${o?'കൈയിലാണ്':'ലൈബ്രറിയിലുണ്ട്'}</span></div><button class="btn x" onclick="delBk('${b.id}')">നീക്കുക</button></div>`}).join(''):'<div class="empty">പുസ്തകങ്ങൾ ചേർക്കുക</div>'}
+function addBk(){const L=$('#bn').value.split('\n').map(x=>x.trim()).filter(Boolean);let n=0;
+ L.forEach(x=>{if(!S.books.some(b=>b.title.toLowerCase()==x.toLowerCase())){S.books.push({id:uid(),title:x});n++}});
+ save();toast(n+' പുസ്തകം സേവ് ചെയ്തു');R()}
+function delBk(id){if(!confirm('ഈ പുസ്തകം നീക്കണോ?'))return;S.books=S.books.filter(b=>b.id!=id);save();stats();bl()}
+function restore(){try{const d=JSON.parse($('#bu').value);if(!d.students||!d.books||!d.loans)throw 0;if(!confirm('ഇപ്പോഴുള്ള ഡാറ്റ മാറ്റി ബാക്കപ്പ് ചേർക്കണോ?'))return;S=d;save();toast('തിരിച്ചു ചേർത്തു');R()}catch(e){toast('ബാക്കപ്പ് ശരിയല്ല','e')}}
+$('#ring').innerHTML=[1,2,3,4].map((c,i)=>`<div class="bk" style="--a:${i*90}deg;--c:${CC[c]}"><i class="f">${c}</i><i class="b"></i><i class="r"></i><i class="l"></i><i class="t"></i><i class="u"></i></div>`).join('');
+document.addEventListener('mousemove',e=>{document.querySelectorAll('.tilt').forEach(el=>{const r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;el.style.transform=Math.abs(x)<.9&&Math.abs(y)<.9?`rotateY(${x*18}deg) rotateX(${-y*18}deg)`:''})});
+const KID=(sh,hr)=>`<svg class="kid" viewBox="0 0 200 170" aria-hidden="true"><ellipse cx="100" cy="160" rx="62" ry="8" fill="rgba(0,0,0,.18)"/><g class="bob"><rect x="62" y="104" width="76" height="50" rx="24" fill="${sh}"/><circle cx="100" cy="70" r="34" fill="#f6c9a0"/><path d="M66 68c0-26 16-38 34-38s34 12 34 38c-8-14-20-20-34-20s-26 6-34 20z" fill="${hr}"/><g class="eye"><circle cx="87" cy="76" r="4.5" fill="#222"/><circle cx="113" cy="76" r="4.5" fill="#222"/></g><circle cx="80" cy="88" r="5" fill="#f4a08c" opacity=".7"/><circle cx="120" cy="88" r="5" fill="#f4a08c" opacity=".7"/><path d="M92 90q8 8 16 0" stroke="#7a3b2e" stroke-width="3" fill="none" stroke-linecap="round"/></g><path d="M100 124c-14-8-34-8-50-2v32c16-6 36-6 50 2z" fill="#fff" stroke="#8a6414" stroke-width="2"/><path d="M100 124c14-8 34-8 50-2v32c-16-6-36-6-50 2z" fill="#fff" stroke="#8a6414" stroke-width="2"/><path d="M60 134q16-4 32 2M60 142q16-4 32 2M108 136q16-6 32-2M108 144q16-6 32-2" stroke="#c9d3e3" stroke-width="2" fill="none"/><path class="pg" d="M100 124c14-8 34-8 50-2v32c-16-6-36-6-50 2z" fill="#f7f9fc" stroke="#8a6414" stroke-width="2"/><circle cx="54" cy="148" r="8" fill="#f6c9a0"/><circle cx="146" cy="148" r="8" fill="#f6c9a0"/><text class="up" x="26" y="62" font-size="24" font-weight="800" fill="#d9a441">അ</text><text class="up" style="animation-delay:1.3s" x="158" y="54" font-size="24" font-weight="800" fill="#4a6fd1">A</text><text class="up" style="animation-delay:2.5s" x="152" y="104" font-size="20" fill="#d9a441">★</text></svg>`;
+$('#strip').innerHTML=KID('#4a6fd1','#2b2118')+'<div style="flex:1;min-width:0"><b>വായിക്കാം, വളരാം!</b><span>ഓരോ ദിവസവും ഒരു പുതിയ പുസ്തകം</span></div>'+KID('#c9486b','#5a2d1b');
+let me=null,isA=false;try{const sv=sessionStorage.getItem('glps-me');isA=sv==='A';me=isA?null:(+sv||null)}catch(e){}
+const mine=l=>!me||l.cls==me;let lc=1;
+function loginView(){const L=$('#login');
+ if(me||isA){L.hidden=true;if(me)ic=sc=me;$('#who').innerHTML=isA?`<span>അഡ്മിൻ</span><button class="btn x" onclick="logout()">ലോഗൗട്ട്</button>`:`<span>ക്ലാസ് ${me} അധ്യാപക ലോഗിൻ</span><button class="btn x" onclick="logout()">ലോഗൗട്ട്</button>`;return}
+ L.hidden=false;$('#who').innerHTML='';
+ L.innerHTML=`<div class="panel">${KID('#4a6fd1','#2b2118')}<h1 class="lg3d">പുസ്തക ചങ്ങാതി</h1><h2>അധ്യാപക ലോഗിൻ</h2><small style="color:var(--mut)">ജി.എൽ.പി.എസ് മുണ്ടേക്കരാട് ലൈബ്രറി</small><label>ക്ലാസ് തിരഞ്ഞെടുക്കുക</label>${chips(lc,'pickLc')}<button class="chip ${lc==='A'?'on':''}" style="--c:#0f2038;width:auto;padding:0 18px;margin-top:8px;font-size:16px" onclick="pickLc('A')">അഡ്മിൻ</button><label>പാസ്‌വേഡ്</label><input id="pw" type="password" autocomplete="current-password" onkeydown="if(event.key=='Enter')doLogin()"><button class="go" onclick="doLogin()">ലോഗിൻ</button></div>`}
+function pickLc(c){lc=c;loginView()}
+function doLogin(){if($('#pw').value===(lc==='A'?'Admin@123':lc+'Admin@123')){isA=lc==='A';me=isA?null:lc;try{sessionStorage.setItem('glps-me',isA?'A':me)}catch(e){}loginView();tab=isA?'adm':'issue';R()}else toast('പാസ്‌വേഡ് തെറ്റാണ്','e')}
+function logout(){me=null;isA=false;try{sessionStorage.removeItem('glps-me')}catch(e){}loginView();R()}
+const BOOK=(x,y,c)=>`<g transform='translate(${x} ${y})'><rect x='-15' width='30' height='18' rx='3' fill='${c}'/><rect x='-13' y='2' width='12' height='14' fill='#fff'/><rect x='1' y='2' width='12' height='14' fill='#fff'/></g>`;
+const TREE=(x,s)=>`<g class='sway' style='transform-origin:${x}px 178px'><rect x='${x-6}' y='110' width='12' height='70' rx='4' fill='#8a5a2b'/><circle cx='${x}' cy='95' r='${34*s}' fill='#3f9e4a'/><circle cx='${x-24*s}' cy='112' r='${24*s}' fill='#4cb356'/><circle cx='${x+24*s}' cy='112' r='${24*s}' fill='#4cb356'/></g>`;
+const FLW=(x,y,c)=>`<g class='sway' style='transform-origin:${x}px ${y+12}px'><rect x='${x-1}' y='${y}' width='2' height='12' fill='#2f8a3c'/><circle cx='${x}' cy='${y}' r='5' fill='${c}'/><circle cx='${x}' cy='${y}' r='2' fill='#ffe27a'/></g>`;
+const GARDEN=()=>{const k=(x,s,h)=>KID(s,h).replace(/class=.kid./,`x='${x}' y='84' width='132' height='112'`);return `<svg class='garden' viewBox='0 0 800 230' aria-hidden='true'><defs><linearGradient id='sk' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='#6fc3f2'/><stop offset='1' stop-color='#e3f6ff'/></linearGradient></defs><rect width='800' height='230' fill='url(#sk)'/><g class='spin'><circle cx='716' cy='46' r='22' fill='#ffd54a'/><path d='M716 8v10M716 74v10M678 46h10M744 46h10M689 19l7 7M736 66l7 7M743 19l-7 7M689 73l7-7' stroke='#ffd54a' stroke-width='4' stroke-linecap='round'/></g><g class='cl'><ellipse cx='130' cy='44' rx='34' ry='13' fill='#fff'/><ellipse cx='156' cy='36' rx='24' ry='12' fill='#fff'/></g><g class='cl' style='animation-delay:-9s'><ellipse cx='470' cy='30' rx='30' ry='11' fill='#fff'/><ellipse cx='492' cy='23' rx='20' ry='10' fill='#fff'/></g><path d='M0 150Q120 90 260 140T520 130T800 140V230H0z' fill='#9bdc78'/><path d='M0 175Q200 135 420 170T800 160V230H0z' fill='#6cc352'/><rect y='192' width='800' height='38' fill='#58b043'/>${TREE(70,1)}${TREE(745,.9)}<g class='fly'><path d='M0 70q7-9 14 0q7-9 14 0' stroke='#334' stroke-width='2.5' fill='none'/></g><g class='fly' style='animation-duration:24s;animation-delay:-9s'><path d='M0 104q6-8 12 0q6-8 12 0' stroke='#334' stroke-width='2' fill='none'/></g><ellipse cx='400' cy='198' rx='185' ry='20' fill='#ff8fab'/><ellipse cx='400' cy='195' rx='172' ry='15' fill='#ffc2d4'/>${k(268,'#4a6fd1','#2b2118')}${k(402,'#c9486b','#5a2d1b')}<g transform='translate(104 92)'><g class='bob'><ellipse rx='11' ry='8' fill='#ff7a59'/><circle cx='9' cy='-6' r='6' fill='#ff7a59'/><path d='M14-7l7 3-7 2z' fill='#ffc233'/><circle cx='10' cy='-7' r='1.5' fill='#222'/><path class='flap' style='transform-origin:-2px 0' d='M-6 0q-6-14 4-14q4 8 2 14z' fill='#e85d3d'/>${BOOK(6,2,'#1b9aa6')}</g></g><g transform='translate(580 148)'><g class='bob' style='animation-delay:-1s'><ellipse cx='-7' cy='-14' rx='4.5' ry='12' fill='#fff' stroke='#e2e2e2'/><ellipse cx='7' cy='-14' rx='4.5' ry='12' fill='#fff' stroke='#e2e2e2'/><ellipse cx='-7' cy='-14' rx='2' ry='8' fill='#ffb3c1'/><ellipse cx='7' cy='-14' rx='2' ry='8' fill='#ffb3c1'/><ellipse cy='28' rx='20' ry='16' fill='#fff' stroke='#e2e2e2'/><circle cy='6' r='14' fill='#fff' stroke='#e2e2e2'/><circle cx='-5' cy='4' r='2' fill='#222'/><circle cx='5' cy='4' r='2' fill='#222'/><circle cy='9' r='2' fill='#ff8fab'/>${BOOK(0,24,'#d9822b')}</g></g><g transform='translate(668 150)'><g class='bob' style='animation-delay:-2s'><circle cx='-12' cy='-6' r='6' fill='#a9743c'/><circle cx='12' cy='-6' r='6' fill='#a9743c'/><ellipse cy='34' rx='22' ry='15' fill='#b98250'/><circle cy='8' r='16' fill='#b98250'/><ellipse cy='14' rx='8' ry='6' fill='#ecd0a5'/><circle cy='12' r='2.5' fill='#333'/><circle cx='-6' cy='4' r='2' fill='#222'/><circle cx='6' cy='4' r='2' fill='#222'/>${BOOK(0,26,'#4a6fd1')}</g></g>${FLW(30,190,'#ff6b81')}${FLW(120,196,'#ffd54a')}${FLW(210,192,'#fff')}${FLW(615,198,'#ff9ff3')}${FLW(715,196,'#ff6b81')}${FLW(775,200,'#ffd54a')}<g class='fly' style='animation-duration:28s;animation-delay:-5s'><g class='bob'><ellipse cy='150' rx='6' ry='4' fill='#ff9f1c'/><ellipse cx='8' cy='150' rx='6' ry='4' fill='#ff6b81'/></g></g></svg>`};
+$('#strip').innerHTML=GARDEN()+'<div class="cap">വായിക്കാം, വളരാം!</div>';
+V.adm=()=>`<div class="panel"><h2>എല്ലാ ക്ലാസുകളുടെയും വിവരം</h2>${[1,2,3,4].map(c=>{const L=S.loans.filter(l=>l.cls==c),o=L.filter(l=>!l.ret).length,d=L.filter(late).length;return`<div class="item" style="border-left:8px solid ${CC[c]}"><div><h4>ക്ലാസ് ${c}</h4><small>കുട്ടികൾ: ${S.students.filter(s=>s.cls==c).length} · കൈയിലുള്ള പുസ്തകം: ${o} · വൈകിയവ: ${d} · ആകെ നൽകിയത്: ${L.length}</small></div>${d?`<span class="badge late">${d} വൈകി</span>`:'<span class="badge">ശരി</span>'}</div>`}).join('')}<h2 style="margin-top:18px">വൈകിയ പുസ്തകങ്ങൾ</h2>${(()=>{const a=S.loans.filter(late);return a.length?a.map(l=>loanCard(l,0)).join(''):'<div class="empty">വൈകിയ പുസ്തകങ്ങളൊന്നുമില്ല</div>'})()}</div>`;
+load();loginView();R();
+const K=['students','books','loans'];let DB=null;const snap0={students:{},books:{},loans:{}},ready={},seen={};
+const cloud=t=>{const e=$('#cloud');if(e)e.textContent=t};
+const dbErr=e=>{toast('ഓൺലൈൻ സേവ് ചെയ്യാനായില്ല. എഡിറ്റ് അനുമതി വേണം','e');cloud('⚠ ഓൺലൈൻ സേവ് ഇല്ല')};
+function sync(only){if(!DB)return;for(const n of K){if(!ready[n]||(only&&only!=n))continue;const cur={};S[n].forEach(x=>cur[x.id]=JSON.stringify(x));const old=snap0[n];
+ for(const id in cur)if(cur[id]!==old[id])DB.doc(n+'/'+id).set(JSON.parse(cur[id])).catch(dbErr);
+ for(const id in old)if(!(id in cur))DB.doc(n+'/'+id).delete().catch(dbErr);snap0[n]=cur}}
+function refresh(){stats();({ret:rl,stu:sl,bk:bl,rec:cl})[tab]?.();if(tab=='adm')R();if(tab=='issue'){const a=$('#dls'),b=$('#dlb');if(a)a.innerHTML=S.students.filter(s=>s.cls==ic).map(s=>`<option value="${esc(s.name)}">`).join('');if(b)b.innerHTML=S.books.map(x=>`<option value="${esc(x.title)}">`).join('')}}
+cloud('ഈ ഉപകരണത്തിൽ മാത്രം സേവ് ആകുന്നു');
+if(window.claude&&claude.use)claude.use('db').then(d=>{if(!d)return;DB=d;cloud('☁ ഓൺലൈൻ സേവ് ഓണാണ്');K.forEach(n=>DB.collection(n).onSnapshot(q=>{const first=!seen[n];seen[n]=1;
+ if(first&&q.empty&&S[n].length){ready[n]=1;snap0[n]={};sync(n);return}
+ ready[n]=1;S[n]=q.docs.map(d=>({...d.data(),id:d.id}));snap0[n]=Object.fromEntries(S[n].map(x=>[x.id,JSON.stringify(x)]));try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}refresh()},dbErr))}).catch(()=>{});
+</script></body></html>
