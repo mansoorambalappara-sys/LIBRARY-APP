@@ -2,7 +2,7 @@
 <html lang="ml"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>പുസ്തക ചങ്ങാതി – ജി.എൽ.പി.എസ് മുണ്ടേക്കരാട് ലൈബ്രറി</title>
-<link href="https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#e6ecf4;--ink:#0f2038;--mut:#55657d;--card:#fff;--line:#cdd7e5;--acc:#d9a441;--ok:#1b7f79;--bad:#c8433f;--in:#f3f6fa;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1230;--ink:#eef1ff;--mut:#9aa3d6;--card:#1a1f4d;--line:#2d3470;--in:#12163b;--ok:#3fd6c1;--bad:#ff7a7f}}
@@ -59,6 +59,21 @@ input:focus,textarea:focus,button:focus-visible{outline:3px solid var(--acc);out
 .sway{animation:sw2 3.6s ease-in-out infinite}@keyframes sw2{50%{transform:rotate(2.5deg)}}.cl{animation:cld 30s ease-in-out infinite alternate}@keyframes cld{to{transform:translateX(150px)}}.spin{transform-origin:716px 46px;animation:sp 24s linear infinite}@keyframes sp{to{transform:rotate(360deg)}}.fly{animation:fly 18s linear infinite}@keyframes fly{from{transform:translateX(-80px)}to{transform:translateX(900px)}}.flap{animation:flap .45s ease-in-out infinite alternate}@keyframes flap{to{transform:rotate(-30deg)}}
 .lg3d{margin:0;font-size:clamp(30px,9vw,44px);color:#e8a33d;text-shadow:0 1px 0 #cf8a26,0 2px 0 #b9761d,0 3px 0 #a36316,0 4px 0 #8d5110,0 5px 0 #77420c,0 10px 12px rgba(15,32,56,.35)}
 .login{position:fixed;inset:0;z-index:30;display:grid;place-items:center;padding:16px;background:radial-gradient(circle at 70% 20%,#27619c,transparent 55%),#0c2342;overflow:auto}.login[hidden]{display:none}.login .panel{width:min(420px,100%);text-align:center}.login .chips{justify-content:center}.who{display:flex;align-items:center;gap:10px;justify-content:flex-end;margin:0 0 8px;font-weight:600}.who .btn{padding:6px 12px}
+.login{display:flex;flex-direction:column;align-items:center;justify-content:flex-start}.lwrap{width:min(620px,100%)}.ltitle{margin:6px 0 0;text-align:center;font-size:clamp(34px,10vw,56px);font-weight:800;line-height:1.25;color:#ffd36b;animation:sway3 6s ease-in-out infinite;text-shadow:0 1px 0 #e0a93a,0 2px 0 #c98f22,0 3px 0 #b3791a,0 4px 0 #9d6613,0 5px 0 #87550f,0 6px 0 #6f450c,0 14px 16px rgba(0,0,0,.4)}.lsub{text-align:center;color:#dbe8f8;font-weight:700;margin-bottom:10px}.login .garden{display:block;width:100%;height:200px;border-radius:20px;box-shadow:0 8px 0 #091a31,0 18px 30px rgba(0,0,0,.4)}.login .panel>.kid,.login .panel .lg3d{display:none}
+.login{justify-content:center;background:radial-gradient(circle at 50% 25%,#2a2109 0%,#0b0b0b 60%,#000 100%);padding:16px 16px 150px}
+.login::before{content:'';position:fixed;left:8%;top:10%;width:3px;height:3px;border-radius:50%;background:#ffd36b;box-shadow:120px 60px #ffd36b,260px 20px #fff2c2,420px 90px #ffd36b,610px 30px #fff2c2,780px 70px #ffd36b,900px 15px #fff2c2,60px 180px #fff2c2,330px 160px #ffd36b,700px 150px #ffd36b,1000px 120px #fff2c2;animation:tw 3s ease-in-out infinite alternate}@keyframes tw{from{opacity:.25}to{opacity:1}}
+.lwrap{position:relative;z-index:1}.login .lwrap .garden{position:fixed;left:0;bottom:0;width:100%;height:clamp(150px,32vw,430px);border-radius:0;box-shadow:none;z-index:0}
+.login .panel{position:relative;z-index:1;width:min(400px,92vw);padding:22px 20px;color:#f6d98a;background:linear-gradient(145deg,#262626 0%,#050505 55%,#2a1f06 100%);border:2px solid #d9a441;border-radius:22px;transform:perspective(900px) rotateX(5deg);animation:lfloat 5s ease-in-out infinite;box-shadow:0 0 0 1px #6b4d12 inset,0 1px 0 #ffe29a inset,0 8px 0 #7a5410,0 10px 0 #4a3208,0 28px 50px rgba(0,0,0,.65),0 0 40px rgba(217,164,65,.35)}
+@keyframes lfloat{0%,100%{transform:perspective(900px) rotateX(6deg) rotateY(-4deg) translateY(0)}50%{transform:perspective(900px) rotateX(2deg) rotateY(4deg) translateY(-8px)}}
+.login .panel h2{color:#ffd36b;text-shadow:0 2px 0 #7a5410}.login .panel label{color:#d9b765}.login .panel small{color:#b8975a!important}
+.login .panel input{background:#0b0b0b;color:#ffe9b0;border-color:#8a6414}.login .panel input:focus{outline-color:#ffd36b}
+.login .panel .chip{border-color:#d9a441;color:#ffd36b;background:#0b0b0b}.login .panel .chip.on{background:linear-gradient(145deg,#ffe08a,#c88f1f);color:#111;box-shadow:0 8px 0 #6b4a0e}
+.login .panel .go{background:linear-gradient(145deg,#ffe08a,#d9a441 55%,#a87414);color:#111;box-shadow:0 5px 0 #6b4a0e,0 12px 20px rgba(0,0,0,.5)}
+.fl3{position:fixed;inset:0;perspective:900px;pointer-events:none;overflow:hidden;z-index:0}.fl3 .bk{left:var(--x);top:var(--y);transform:none;scale:var(--s);opacity:.45;animation:fl3d var(--d) ease-in-out infinite}
+@keyframes fl3d{0%{transform:translateY(0) rotateX(25deg) rotateY(0deg)}50%{transform:translateY(-40px) rotateX(25deg) rotateY(180deg)}100%{transform:translateY(0) rotateX(25deg) rotateY(360deg)}}
+.wrap{position:relative;z-index:1}.wrap .panel{transform:perspective(1100px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .15s ease-out}
+.hero,.strip{animation:idle3d 8s ease-in-out infinite alternate}@keyframes idle3d{from{transform:perspective(1000px) rotateY(-2deg) rotateX(1deg)}to{transform:perspective(1000px) rotateY(2deg) rotateX(-1deg)}}
+.item{transition:transform .15s,box-shadow .15s}.item:hover{transform:perspective(600px) rotateX(4deg) translateY(-3px);box-shadow:0 10px 18px rgba(15,32,56,.2)}
 .cloud{position:fixed;left:10px;bottom:calc(8px + env(safe-area-inset-bottom,0px));font-size:12px;background:var(--card);border:1px solid var(--line);color:var(--mut);padding:2px 10px;border-radius:999px;z-index:6}.strip .kid{width:130px}.bob{animation:bob 3s ease-in-out infinite}@keyframes bob{50%{transform:translateY(-4px)}}
 .eye{transform-box:fill-box;transform-origin:center;animation:blink 4s infinite}@keyframes blink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.1)}}
 .pg{transform-origin:100px 124px;animation:pf 3.2s ease-in-out infinite}@keyframes pf{0%{transform:scaleX(1);opacity:1}45%{transform:scaleX(-1);opacity:1}55%{transform:scaleX(-1);opacity:0}100%{transform:scaleX(1);opacity:0}}
@@ -70,6 +85,111 @@ input:focus,textarea:focus,button:focus-visible{outline:3px solid var(--acc);out
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style></head><body>
 <div class="wrap">
+<div class="who" id="who"></div>
+<div class="hero"><div><h1>പുസ്തക ചങ്ങാതി</h1><div class="sub">സ്കൂൾ ലൈബ്രറി</div><p style="font-size:16px;font-weight:600">ജി.എൽ.പി സ്കൂൾ മുണ്ടേക്കരാട്</p></div><div hidden><h1>ജി.എൽ.പി.എസ് മുണ്ടേക്കരാട്<br>സ്കൂൾ ലൈബ്രറി</h1><p>ഒന്നു മുതൽ നാലു വരെ ക്ലാസുകൾ</p></div>
+<div class="scene"><div class="ring" id="ring"></div></div></div>
+<div class="strip" id="strip"></div>
+<div class="stats">
+<div class="st tilt"><b id="s1">0</b><span>കുട്ടികളുടെ കൈയിലുള്ള പുസ്തകം</span></div>
+<div class="st tilt"><b id="s2" style="color:var(--bad)">0</b><span>തിരിച്ചു നൽകാൻ വൈകിയവ</span></div>
+<div class="st tilt"><b id="s3">0</b><span>ആകെ പുസ്തകങ്ങൾ</span></div></div>
+<div class="tabs" id="tabs"></div>
+<div id="app"></div>
+</div><div class="login" id="login"><div class="lwrap"><h1 class="ltitle">പുസ്തക ചങ്ങാതി</h1><div class="lsub">സ്കൂൾ ലൈബ്രറി · ജി.എൽ.പി സ്കൂൾ മുണ്ടേക്കരാട്</div></div></div><div id="cloud" class="cloud"></div><div id="toast"></div>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script><script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script><script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script>
+const KEY='glps21853-library-v1',CC={1:'#d9822b',2:'#1b9aa6',3:'#4a6fd1',4:'#c9486b'};
+const RAW=`1|2175|HISHAM P P
+1|2179|RABEEUL RASHAAD K
+1|2178|FIDHA FATHIMA C
+1|2176|MARJAANAH K
+1|2171|AL AMEEN P S
+1|2173|FATHIMATH C M
+1|2169|AYISHA RIYA C
+1|2168|FATHIMA RAZANA
+1|2172|FAIHA FATHIMA
+1|2170|FATHIMA ISHA V
+1|2177|FATHIMA NASHWA V
+1|2180|AYISHA MEHRIN C
+1|2174|MUHAMMED RISWAN .P
+1|2181|MUHAMMED RAZAN A R
+1|2167|HIBA FATHIMA
+2|2165|FATHIMA RAZANA P
+2|2162|ALAYNA FATHIMA P J
+2|2157|MUHAMMED RISWAN P
+2|2156|MUHAMMED ASLAM K
+2|2158|NISHAN V
+2|2153|FATHIMA MUFEEDA
+2|2164|AYISHA HANA C M
+2|2152|MUHAMMED TAMIM C
+2|2161|FATHIMA MEHRIN K
+2|2151|NISHBA FATHIMA C
+2|2155|AIRA FATHIMA K
+2|2154|MUHAMMED AFNAS K
+2|2163|MUHAMMED SHAHABAS KP
+2|2159|ARYANANDA B
+2|2160|DHRUVA DK
+3|2134|MIFTHAH K C
+3|2145|MUHAMMED AMJAD P P
+3|2141|SHIHA FATHIMA C T
+3|2148|MUHAMMED RAZAN P P
+3|2140|FATHIMA HAYA P P
+3|2136|MUHAMMED MINHAJ N F
+3|2137|MUHAMMED MINHAJ P
+3|2135|MINHA FATHIMA P
+3|2139|FATHIMA RIFA N
+3|2144|RABEEH C
+3|2146|ALEENA A P
+3|2138|MUHAMMED HISHAM C
+3|2143|MUHAMMED MUSTHAFA
+3|2149|FATHIMA HAFILA V
+3|2133|MUHAMMED SHAMMAS M C
+3|2142|ANSAF M K
+4|2129|MUHAMMED SHARIF M C
+4|2130|AHMMED NAJIL V
+4|2119|MUHAMMED RAIHAN N
+4|2128|MINYA FATHIMA C K
+4|2124|NIYA FATHIMA K P
+4|2121|AJWA FATHIMA C
+4|2122|FAHMA FATHIMA C
+4|2118|SHAHMA P K
+4|2117|FATHIMA MEHRIN C
+4|2116|FATHIMA SWAFA
+4|2115|FATHIMA VAFA
+4|2127|MUHAMMED RIZAN C
+4|2123|ABDULLA MINHAJ C T
+4|2114|SILVA FATHIMA C
+4|2125|HISANA FATHIMA C K
+4|2126|JADUL HAQUE K
+4|2120|MUHAMMED RAZAN P
+4|2113|MUHAMMED HASHIM V`;
+let S,tab='issue',ic=1,sc=1,rf='all';
+const $=s=>document.querySelector(s),uid=()=>Math.random().toString(36).slice(2,9);
+const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const iso=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+const today=()=>iso(new Date()),plus=(s,n)=>{const d=new Date(s+'T00:00:00');d.setDate(d.getDate()+n);return iso(d)};
+const fmt=s=>s?s.split('-').reverse().join('/'):'';
+function load(){try{S=JSON.parse(localStorage.getItem(KEY))}catch(e){}
+ if(!S||!S.students){S={students:[],books:[],loans:[]};RAW.split('\n').forEach(l=>{const[c,a,n]=l.split('|');S.students.push({id:'s'+a,cls:+c,adm:a,name:n})});save()}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}sync()}
+let tt;function toast(m,e){const t=$('#toast');t.textContent=m;t.className='show'+(e?' err':'');clearTimeout(tt);tt=setTimeout(()=>t.className='',2600)}
+const late=l=>!l.ret&&l.due<today();
+function stats(){const m=S.loans.filter(mine);$('#s1').textContent=m.filter(l=>!l.ret).length;$('#s2').textContent=m.filter(late).length;$('#s3').textContent=S.books.length}
+const TABS=[['issue','പുസ്തകം നൽകുക'],['ret','തിരിച്ചെടുക്കുക'],['stu','കുട്ടികൾ'],['bk','പുസ്തകങ്ങൾ'],['rec','രേഖകൾ']];
+function tabs(){$('#tabs').innerHTML=(isA?TABS.concat([['adm','എല്ലാ ക്ലാസുകളും']]):TABS).map(t=>`<button class="tab ${t[0]==tab?'on':''}" onclick="tab='${t[0]}';R()">${t[1]}</button>`).join('')}
+const chips=(v,fn)=>`<div class="chips">${[1,2,3,4].filter(c=>!me||c==me).map(c=>`<button class="chip ${c==v?'on':''}" style="--c:${CC[c]}" onclick="${fn}(${c})">${c}</button>`).join('')}</div>`;
+const V={
+issue(){const t=today();return`<div class="panel"><h2>പുസ്തകം നൽകുക</h2><label>ക്ലാസ്</label>${chips(ic,'setIc')}
+<label>കുട്ടിയുടെ പേര്</label><input id="is" list="dls" autocomplete="off" placeholder="പേര് എഴുതി തിരഞ്ഞെടുക്കുക"><datalist id="dls">${S.students.filter(s=>s.cls==ic).map(s=>`<option value="${esc(s.name)}">`).join('')}</datalist>
+<label>പുസ്തകത്തിന്റെ പേര്</label><input id="ib" list="dlb" autocomplete="off" placeholder="പുസ്തകം തിരഞ്ഞെടുക്കുക / പുതിയത് എഴുതുക"><datalist id="dlb">${S.books.map(b=>`<option value="${esc(b.title)}">`).join('')}</datalist>
+<div class="row"><div><label>എടുത്ത തീയതി</label><input type="date" id="d1" value="${t}" onchange="$('#d2').value=plus(this.value,14)"></div><div><label>തിരിച്ചേൽപ്പിക്കേണ്ട തീയതി</label><input type="date" id="d2" value="${plus(t,14)}"></div></div>
+<button class="go" onclick="issue()">സേവ് ചെയ്യുക</button></div>`},
+ret(){return`<div class="panel"><h2>തിരിച്ചെടുക്കുക</h2><label>പുസ്തകത്തിന്റെയോ കുട്ടിയുടെയോ പേര് തിരയുക</label><input id="rq" oninput="rl()" placeholder="തിരയുക"><div id="rlist"></div></div>`},
+stu(){return`<div class="panel"><h2>കുട്ടികൾ</h2>${chips(sc,'setSc')}<label>തിരയുക</label><input id="sq" oninput="sl()" placeholder="പേര്">
+<div id="slist"></div>
+<label>പുതിയ കുട്ടിയെ ചേർക്കുക (ഓരോ വരിയിലും ഒരു പേര്)</label><textarea id="sn" rows="3" placeholder="ഒന്നോ അതിലധികമോ പേരുകൾ"></textarea><button class="go alt" onclick="addStu()">ക്ലാസ് ${sc}-ൽ ചേർക്കുക</button></div>`},
+bk(){return`<div class="panel"><h2>പുസ്തകങ്ങൾ</h2><label>പുസ്തകങ്ങൾ ചേർക്കുക (ഓരോ വരിയിലും ഒന്ന്)</label><textarea id="bn" rows="4" placeholder="പുസ്തകത്തിന്റെ പേരുകൾ"></textarea><button class="go alt" onclick="addBk()">പുസ്തകങ്ങൾ സേവ് ചെയ്യുക</button>
+<label>തിരയുക</label><input id="bq" oninput="bl()" plalass="wrap">
 <div class="who" id="who"></div>
 <div class="hero"><div><h1>പുസ്തക ചങ്ങാതി</h1><div class="sub">സ്കൂൾ ലൈബ്രറി</div><p style="font-size:16px;font-weight:600">ജി.എൽ.പി സ്കൂൾ മുണ്ടേക്കരാട്</p></div><div hidden><h1>ജി.എൽ.പി.എസ് മുണ്ടേക്കരാട്<br>സ്കൂൾ ലൈബ്രറി</h1><p>ഒന്നു മുതൽ നാലു വരെ ക്ലാസുകൾ</p></div>
 <div class="scene"><div class="ring" id="ring"></div></div></div>
